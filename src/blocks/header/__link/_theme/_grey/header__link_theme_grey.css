@@ -1,0 +1,7 @@
+.header__link_theme_grey {
+    color: #a9a9a9;
+}
+  
+  .header__link_theme_grey:hover {
+    cursor: pointer;
+}

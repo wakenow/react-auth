@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+Учебный проект Яндекс-Практикума.
+Автор - Сергей Федоров.
+Функциональность реализована при помощи React.
+Используются хуки useState и useEffect.
+https://wakenow.github.io/mesto-react
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
