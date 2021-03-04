@@ -1,5 +1,4 @@
 import React from 'react';
-import closeButtonPath from '../images/close-icon.svg';
 import yesPath from '../images/yes.svg';
 import noPath from '../images/no.svg';
 
@@ -18,7 +17,6 @@ function InfoTooltip({ isSuccess, isOpen, onClose }) {
           type="reset"
           className="popup__close-button popup__close-button_type_input"
           onClick={onClose}>
-          <img src={closeButtonPath} alt="закрыть" />
         </button>
       </div>
     </div>

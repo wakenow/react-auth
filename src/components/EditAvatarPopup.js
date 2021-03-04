@@ -44,7 +44,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
         type="url"
         required
         placeholder="ссылка на картинку"
-        autocomplete="off"
+        autoComplete="off"
       />
       <span className="popup__error popup__error_type_link"></span>
     </PopupWithForm>

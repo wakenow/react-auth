@@ -63,7 +63,7 @@ return (
         required
         minLength="2"
         maxLength="40"
-        autocomplete="off"
+        autoComplete="off"
         value={name}
         onChange={handleNameInput}
       />
@@ -75,7 +75,7 @@ return (
         required
         minLength="2"
         maxLength="200"
-        autocomplete="off"
+        autoComplete="off"
         value={description}
         onChange={handleDescriptionInput}
       />

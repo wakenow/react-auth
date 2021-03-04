@@ -1,0 +1,13 @@
+  .auth-form__save-button {
+    margin: 185px 0 16px;
+    padding: 0;
+    border: 0;
+    width: 83%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }

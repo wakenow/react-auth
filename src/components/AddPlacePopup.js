@@ -51,7 +51,7 @@ function AddPlacePopup({ isOpen, submitButtonText, onClose, onAddPlace }) {
         required
         minLength="1"
         maxLength="30"
-        autocomplete="off"
+        autoComplete="off"
       />
       <span className="popup__error popup__error_type_place"></span>
       <input
@@ -62,7 +62,7 @@ function AddPlacePopup({ isOpen, submitButtonText, onClose, onAddPlace }) {
         type="url"
         required
         placeholder="ссылка на картинку"
-        autocomplete="off"
+        autoComplete="off"
       />
       <span className="popup__error popup__error_type_link"></span>
     </PopupWithForm>

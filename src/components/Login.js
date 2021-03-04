@@ -71,7 +71,7 @@ function Login({ handleLogin }) {
           pattern="^[\w\-\.]+@[\w\-\.]+"
           minLength="3"
           maxLength="40"
-          autocomplete="off"
+          autoComplete="off"
           value={data.name}
           onChange={handleChange}
           placeholder="Email"
@@ -85,7 +85,7 @@ function Login({ handleLogin }) {
           pattern="^[\w\-\.#$%&*]+"
           minLength="3"
           maxLength="25"
-          autocomplete="off"
+          autoComplete="off"
           value={data.password}
           onChange={handleChange}
           placeholder="Пароль"
