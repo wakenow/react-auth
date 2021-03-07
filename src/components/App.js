@@ -9,7 +9,7 @@ import Footer from './Footer';
 import EditProfilePopup from './EditProfilePopup';
 import ImagePopup from './ImagePopup';
 import api from '../utils/api';
-import * as auth from '../utils/Auth.js';
+import * as auth from '../utils/auth.js';
 import CurrentUserContext from '../contexts/CurrentUserContext';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
@@ -219,14 +219,12 @@ function App() {
        <div className="App">
         <div className="wrapper">
           <div className="page">
-          <Switch>
             <Route exact path='/'>
               <Header email={email} onLogout={handleLogout} />
             </Route>
             <Route path='/:page'>
               <Header />
             </Route>
-          </Switch>
           <Switch>
             <Route path='/sign-up'>
               <Register handleRegister={handleRegister} />
