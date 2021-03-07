@@ -1,31 +1,22 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import InfoTooltip from './InfoTooltip';
-import * as auth from '../utils/Auth.js';
+import { Link } from 'react-router-dom';
 import { Validator, validationForLoginConfig } from '../utils/Validator';
 
-function Register() {
-    const history = useHistory({});
+function Register({ handleRegister }) {
 
   const [data, setData] = React.useState({
     email: '',
     password: ''
   });
 
-  const [isInfoBoxOpened, setIsInfoBoxOpened] = React.useState(false);
-  const [isSuccess, setIsSuccess] = React.useState(false);
-  const validatorRef = React.useRef();
-
   React.useEffect(() => {
     const form = document.forms.login;
-    validatorRef.current = new Validator(validationForLoginConfig, form);
-    validatorRef.current.enableValidation();
+    let validator = new Validator(validationForLoginConfig, form);
+    validator.enableValidation();
+    return () => {
+      console.log(validator);
+    };
   }, []);
-
-  function handleClose() {
-    setIsInfoBoxOpened(false);
-    isSuccess && history.push('/sign-in');
-  }
 
   function handleChange(evt) {
     const { name, value } = evt.target;
@@ -37,15 +28,7 @@ function Register() {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    auth.register(data)
-      .then((res) => {
-        setIsSuccess(true);
-        setIsInfoBoxOpened(true);
-      })
-      .catch((err) => {
-        setIsSuccess(false);
-        setIsInfoBoxOpened(true)
-      })
+    handleRegister(data)
   }
   return (
     <div>
@@ -89,9 +72,6 @@ function Register() {
           </button>
           <Link to="/sign-in" className="auth-form__link">Уже зарегистрированы? Войти.</Link>
       </form>
-      <InfoTooltip isOpen={isInfoBoxOpened} isSuccess={isSuccess} onClose={handleClose} />
-
-
     </div>
   );
 }

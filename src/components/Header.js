@@ -3,7 +3,7 @@ import logoPath from '../images/header-logo.svg';
 import { useParams, Link } from 'react-router-dom';
 
 function Header({ email, onLogout }) {
-  let { page } = useParams();
+  const { page } = useParams();
   console.log(page);
 
   function renderHeader() {
